@@ -1,0 +1,267 @@
+{
+  "overall_system_score": 0.915,
+  "overall_grade": "A+ (Excellent)",
+  "per_agent": {
+    "log_triage": 0.993,
+    "anomaly_detection": 0.813,
+    "threat_correlation": 0.8338,
+    "mitigation_planning": 1.0,
+    "incident_report": 0.975,
+    "full_pipeline": 0.875
+  },
+  "pytest_tests": "68/68 passed",
+  "total_training_samples": 44,
+  "pipeline_scenarios": [
+    {
+      "scenario": "Brute-Force \u2192 Privilege Escalation \u2192 Exfiltration",
+      "score": 0.75,
+      "severity_predicted": "High",
+      "severity_expected": "Critical",
+      "severity_match": 0.5,
+      "stages_found": 18,
+      "stages_required_min": 3,
+      "key_findings": [
+        "Severity assessed as High.",
+        "11 behavioural anomaly/anomalies detected.",
+        "Attack progression identified: Initial Access \u2192 Execution \u2192 Privilege Escalation \u2192 Defense Evasion \u2192 Lateral Movement \u2192 Exfiltration.",
+        "Likely objective(s): Data theft / intellectual property exfiltration; Domain compromise / persistent access.",
+        "Overall Risk: HIGH \u2014 highest-risk anomaly: Password Spraying"
+      ],
+      "elapsed_ms": 2.37,
+      "pipeline_log": [
+        {
+          "step": "Step 1: Log Triage",
+          "status": "starting",
+          "timestamp": "2026-06-14T13:09:33.513276+00:00"
+        },
+        {
+          "step": "Step 1: Log Triage",
+          "status": "success",
+          "timestamp": "2026-06-14T13:09:33.513591+00:00",
+          "severity": "High"
+        },
+        {
+          "step": "Step 2: Anomaly Detection",
+          "status": "starting",
+          "timestamp": "2026-06-14T13:09:33.513596+00:00"
+        },
+        {
+          "step": "Step 2: Anomaly Detection",
+          "status": "success",
+          "timestamp": "2026-06-14T13:09:33.513701+00:00",
+          "anomalies": 11
+        },
+        {
+          "step": "Step 3: Threat Correlation",
+          "status": "starting",
+          "timestamp": "2026-06-14T13:09:33.513704+00:00"
+        },
+        {
+          "step": "Step 3: Threat Correlation",
+          "status": "success",
+          "timestamp": "2026-06-14T13:09:33.513843+00:00",
+          "stages": 18
+        },
+        {
+          "step": "Step 4: Mitigation Planning",
+          "status": "starting",
+          "timestamp": "2026-06-14T13:09:33.513846+00:00"
+        },
+        {
+          "step": "Step 4: Mitigation Planning",
+          "status": "success",
+          "timestamp": "2026-06-14T13:09:33.515262+00:00"
+        },
+        {
+          "step": "Step 5: Incident Report",
+          "status": "starting",
+          "timestamp": "2026-06-14T13:09:33.515266+00:00"
+        },
+        {
+          "step": "Step 5: Incident Report",
+          "status": "success",
+          "timestamp": "2026-06-14T13:09:33.515599+00:00"
+        }
+      ],
+      "qc_notes": [
+        "QC-INFO: 4 investigation gap(s) identified."
+      ],
+      "status": "success"
+    },
+    {
+      "scenario": "Suspicious PowerShell + C2 Beaconing",
+      "score": 1.0,
+      "severity_predicted": "Critical",
+      "severity_expected": "Critical",
+      "severity_match": 1.0,
+      "stages_found": 3,
+      "stages_required_min": 2,
+      "key_findings": [
+        "Severity assessed as Critical.",
+        "2 behavioural anomaly/anomalies detected.",
+        "Attack progression identified: Execution \u2192 Exfiltration.",
+        "Likely objective(s): Data theft / intellectual property exfiltration.",
+        "Overall Risk: CRITICAL \u2014 highest-risk anomaly: Suspicious PowerShell Execution"
+      ],
+      "elapsed_ms": 0.99,
+      "pipeline_log": [
+        {
+          "step": "Step 1: Log Triage",
+          "status": "starting",
+          "timestamp": "2026-06-14T13:09:33.515647+00:00"
+        },
+        {
+          "step": "Step 1: Log Triage",
+          "status": "success",
+          "timestamp": "2026-06-14T13:09:33.515778+00:00",
+          "severity": "Critical"
+        },
+        {
+          "step": "Step 2: Anomaly Detection",
+          "status": "starting",
+          "timestamp": "2026-06-14T13:09:33.515782+00:00"
+        },
+        {
+          "step": "Step 2: Anomaly Detection",
+          "status": "success",
+          "timestamp": "2026-06-14T13:09:33.515871+00:00",
+          "anomalies": 2
+        },
+        {
+          "step": "Step 3: Threat Correlation",
+          "status": "starting",
+          "timestamp": "2026-06-14T13:09:33.515873+00:00"
+        },
+        {
+          "step": "Step 3: Threat Correlation",
+          "status": "success",
+          "timestamp": "2026-06-14T13:09:33.515980+00:00",
+          "stages": 3
+        },
+        {
+          "step": "Step 4: Mitigation Planning",
+          "status": "starting",
+          "timestamp": "2026-06-14T13:09:33.515985+00:00"
+        },
+        {
+          "step": "Step 4: Mitigation Planning",
+          "status": "success",
+          "timestamp": "2026-06-14T13:09:33.516401+00:00"
+        },
+        {
+          "step": "Step 5: Incident Report",
+          "status": "starting",
+          "timestamp": "2026-06-14T13:09:33.516404+00:00"
+        },
+        {
+          "step": "Step 5: Incident Report",
+          "status": "success",
+          "timestamp": "2026-06-14T13:09:33.516608+00:00"
+        }
+      ],
+      "qc_notes": [
+        "QC-INFO: 4 investigation gap(s) identified."
+      ],
+      "status": "success"
+    },
+    {
+      "scenario": "Cloud IAM Privilege Escalation",
+      "score": 0.75,
+      "severity_predicted": "Critical",
+      "severity_expected": "High",
+      "severity_match": 0.5,
+      "stages_found": 3,
+      "stages_required_min": 1,
+      "key_findings": [
+        "Severity assessed as Critical.",
+        "2 behavioural anomaly/anomalies detected.",
+        "Attack progression identified: Privilege Escalation.",
+        "Likely objective(s): Objective unclear \u2014 insufficient stage coverage to infer.",
+        "Overall Risk: CRITICAL \u2014 highest-risk anomaly: Cloud Privilege Escalation"
+      ],
+      "elapsed_ms": 0.91,
+      "pipeline_log": [
+        {
+          "step": "Step 1: Log Triage",
+          "status": "starting",
+          "timestamp": "2026-06-14T13:09:33.516641+00:00"
+        },
+        {
+          "step": "Step 1: Log Triage",
+          "status": "success",
+          "timestamp": "2026-06-14T13:09:33.516788+00:00",
+          "severity": "Critical"
+        },
+        {
+          "step": "Step 2: Anomaly Detection",
+          "status": "starting",
+          "timestamp": "2026-06-14T13:09:33.516791+00:00"
+        },
+        {
+          "step": "Step 2: Anomaly Detection",
+          "status": "success",
+          "timestamp": "2026-06-14T13:09:33.516835+00:00",
+          "anomalies": 2
+        },
+        {
+          "step": "Step 3: Threat Correlation",
+          "status": "starting",
+          "timestamp": "2026-06-14T13:09:33.516837+00:00"
+        },
+        {
+          "step": "Step 3: Threat Correlation",
+          "status": "success",
+          "timestamp": "2026-06-14T13:09:33.516900+00:00",
+          "stages": 3
+        },
+        {
+          "step": "Step 4: Mitigation Planning",
+          "status": "starting",
+          "timestamp": "2026-06-14T13:09:33.516902+00:00"
+        },
+        {
+          "step": "Step 4: Mitigation Planning",
+          "status": "success",
+          "timestamp": "2026-06-14T13:09:33.517302+00:00"
+        },
+        {
+          "step": "Step 5: Incident Report",
+          "status": "starting",
+          "timestamp": "2026-06-14T13:09:33.517305+00:00"
+        },
+        {
+          "step": "Step 5: Incident Report",
+          "status": "success",
+          "timestamp": "2026-06-14T13:09:33.517522+00:00"
+        }
+      ],
+      "qc_notes": [
+        "QC-INFO: 4 investigation gap(s) identified."
+      ],
+      "status": "success"
+    },
+    {
+      "scenario": "Benign Expected Login (should close early)",
+      "score": 1.0,
+      "severity_predicted": "Informational",
+      "severity_expected": "Informational",
+      "severity_match": 1.0,
+      "stages_found": 0,
+      "stages_required_min": 0,
+      "key_findings": [
+        "Event classified as expected activity by Log Triage Agent."
+      ],
+      "elapsed_ms": 0.1,
+      "pipeline_log": [
+        {
+          "step": "Early Close",
+          "reason": "Escalation=Close"
+        }
+      ],
+      "qc_notes": [
+        "QC-PASS: Early close \u2014 benign event."
+      ],
+      "status": "success"
+    }
+  ]
+}
