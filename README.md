@@ -230,7 +230,3 @@ print(output["incident_report"]["markdown_report"])  # Full MD report
 **Add a new mitigation rule** → `agents/mitigation_planning_agent.py`: add a tuple to `IMMEDIATE_RULES`, `SHORT_TERM_RULES`, `LONG_TERM_RULES`, or `DETECTION_RULES`.
 
 ---
-
-## License
-
-MIT – for educational and research purposes.
