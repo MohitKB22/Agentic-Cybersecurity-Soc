@@ -50,35 +50,6 @@ Raw Log / Events
 
 ---
 
-## File Structure
-
-```
-soc_ai_system/
-├── agents/
-│   ├── __init__.py
-│   ├── base_agent.py               # Abstract base class, shared utilities
-│   ├── log_triage_agent.py         # Agent 1 – Log parsing & classification
-│   ├── anomaly_detection_agent.py  # Agent 2 – Behavioural anomaly detection
-│   ├── threat_correlation_agent.py # Agent 3 – MITRE ATT&CK correlation
-│   ├── mitigation_planning_agent.py# Agent 4 – Remediation planning
-│   ├── incident_report_agent.py    # Agent 5 – Professional report generation
-│   └── soc_orchestrator.py        # Agent 6 – Master pipeline coordinator
-├── data/
-│   ├── training_data.py            # Synthetic labelled training samples
-│   └── training_data.json          # Generated JSON dataset (33 samples)
-├── models/
-│   └── evaluator.py               # Training evaluation & scoring engine
-├── tests/
-│   └── test_agents.py             # 68-test pytest suite (all agents)
-├── reports/
-│   └── test_results.json          # Latest evaluation results
-├── main.py                        # CLI entry point
-├── requirements.txt
-└── README.md
-```
-
----
-
 ## Quick Start
 
 ```bash
